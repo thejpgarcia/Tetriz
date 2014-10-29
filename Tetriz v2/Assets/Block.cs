@@ -49,10 +49,9 @@ public class Block : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		// Default position not valid? Then its game over
-		/*if (!isValidGridPos()) {
-			Debug.Log("GAME OVER");
-			Destroy(gameObject);
-		}*/
+		if (!isValidGridPos()) {
+			Application.LoadLevel ("gameover_c");
+		}
 	}
 	
 	// Update is called once per frame
